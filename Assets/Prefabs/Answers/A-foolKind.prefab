@@ -9,11 +9,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2566615563025784794, guid: 3c49767dcb83d1742be2953a50edb6a3, type: 3}
       propertyPath: m_Name
-      value: Answer Variant 3
+      value: A-foolKind
       objectReference: {fileID: 0}
     - target: {fileID: 5722143198057217555, guid: 3c49767dcb83d1742be2953a50edb6a3, type: 3}
       propertyPath: Text
       value: "You\u2019re not fooling anyone with your kindness!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722143198057217555, guid: 3c49767dcb83d1742be2953a50edb6a3, type: 3}
+      propertyPath: AnswerType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8763390289197747750, guid: 3c49767dcb83d1742be2953a50edb6a3, type: 3}
       propertyPath: m_RootOrder
