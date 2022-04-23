@@ -10,6 +10,8 @@ namespace Main
         private static DialogController instance;
 
 
+        public static DialogController Instance => instance;
+
         private void Awake()
         {
             instance = this;
