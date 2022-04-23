@@ -10,5 +10,6 @@ namespace Models
         public AnswerType AnswerType;
         public String Text;
         public Question FollowupQuestion;
+        public Question FollowupWrongQuestion;
     }
 }

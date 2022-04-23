@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Diagnostics.Tracing;
 using Models;
 using UI;
 using UnityEngine;
@@ -7,18 +7,17 @@ namespace Main
 {
     public class DialogController : MonoBehaviour
     {
-
         private static DialogController instance;
 
         [SerializeField]
         private Answer toolAnswer;
 
         [SerializeField] 
-        private Question startQuestion;
+        public Question startQuestion;
 
         private Dialog _dialog;
         
-        private Question _currentQuestion;
+        public Question _currentQuestion;
 
         public static DialogController Instance => instance;
 
@@ -45,14 +44,26 @@ namespace Main
             Dialog.SetQuestion(selectedAnswer.FollowupQuestion);
         }
 
-        public void OnToolSelected(Tool tool)
-        {
-            // TODO Add answer to tool and call Dialog.setToolAnswer
-        }
+        // public void OnToolSelected(Tool tool)
+        // {
+        //     // TODO Add answer to tool and call Dialog.setToolAnswer
+        //
+        //     _currentQuestion = tool.FollowupTortureQuestion;
+        // }
 
         public void OnAnswerCommitted(Answer selectedAnswer)
         {
+            if (selectedAnswer.AnswerType == AnswerType.CORRECT)
+            {
+                _currentQuestion = selectedAnswer.FollowupQuestion;
+            }
+
+            if (selectedAnswer.AnswerType == AnswerType.WRONG)
+            {
+                _currentQuestion = selectedAnswer.FollowupWrongQuestion;
+            }
             
+            Dialog.SetQuestion(_currentQuestion);
         }
     }
 }
