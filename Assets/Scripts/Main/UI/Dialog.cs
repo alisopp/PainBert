@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using Main;
 using Models;
 using TMPro;
@@ -25,7 +26,7 @@ namespace UI
 
         public void SetQuestion(Question question)
         {
-            // StartCoroutine(TypeLine(question.Text.ToCharArray()));
+            //StartCoroutine(TypeLine(question.Text.ToCharArray()));
             QuestionText.text = question.Text;
             
             List<Answer> answers = question.Answers;
@@ -54,10 +55,10 @@ namespace UI
         {
             DialogController.Instance.OnAnswerCommitted(answerAreas[answerId].Answer);
         }
-        
-        IEnumerator TypeLine(char[] charArray)
+
+        private IEnumerator TypeLine(IEnumerable<char> enumChars)
         {
-            foreach (char c in charArray)
+            foreach (char c in enumChars)
             {
                 QuestionText.text += c;
                 yield return new WaitForSeconds(textSpeed);

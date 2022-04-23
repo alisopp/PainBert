@@ -10,8 +10,6 @@ public class TextButton : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData pointerEventData)
     {
-        Debug.Log(pointerEventData.pointerCurrentRaycast.gameObject.name);
-        
         //TODO find another way to check for selected answer
         if (pointerEventData.pointerCurrentRaycast.gameObject.name.Equals("Answer1"))
         {
