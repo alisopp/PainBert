@@ -622,7 +622,6 @@ MonoBehaviour:
   - Text: {fileID: 0}
   - Text: {fileID: 0}
   - Text: {fileID: 0}
-  - Text: {fileID: 0}
 --- !u!4 &839415097
 Transform:
   m_ObjectHideFlags: 0
@@ -837,8 +836,8 @@ MonoBehaviour:
   Events:
     m_PersistentCalls:
       m_Calls: []
-  Text: 
-  FollowupQuestion: {fileID: 0}
+  Text: Ask politely?
+  FollowupQuestion: {fileID: 519519538}
 --- !u!1 &1585637700
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,8 +885,8 @@ MonoBehaviour:
   Events:
     m_PersistentCalls:
       m_Calls: []
-  Text: 
-  FollowupQuestion: {fileID: 0}
+  Text: Insult
+  FollowupQuestion: {fileID: 519519538}
 --- !u!1 &1799689920
 GameObject:
   m_ObjectHideFlags: 0
@@ -921,6 +920,55 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1834234972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1834234973}
+  - component: {fileID: 1834234974}
+  m_Layer: 0
+  m_Name: ToolAnswer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1834234973
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834234972}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2096499388}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1834234974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834234972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b2e691225347a6b215333eb79959ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Events:
+    m_PersistentCalls:
+      m_Calls: []
+  Text: Ask politely?
+  FollowupQuestion: {fileID: 519519538}
 --- !u!1 &1970537154
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,7 +998,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23dcb20bd2554827b8c05eec3f34de72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnnoyanceLevel: 0
 --- !u!4 &1970537156
 Transform:
   m_ObjectHideFlags: 0
@@ -1125,6 +1172,7 @@ Transform:
   - {fileID: 1492001810}
   - {fileID: 1585637701}
   - {fileID: 1100854952}
+  - {fileID: 1834234973}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
