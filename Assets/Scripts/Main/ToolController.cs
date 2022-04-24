@@ -1,3 +1,4 @@
+using System;
 using Main;
 using Models;
 using UI;
@@ -12,13 +13,13 @@ public class ToolController : MonoBehaviour
     
     public void SetToolQuestion(Question question)
     {
-        // painMultiplier * 1;
-        overallCount++;
+        count += (int) Math.Round(painMultiplier * 1);
+        overallCount += (int) Math.Round(painMultiplier * 1);;
 
-        if(overallCount >= 5)
+        if(overallCount >= 10)
             UIManager.Instance.SetMenu(UIManager.Menu.GAME_OVER);
         
-        if (count >= 3)
+        if (count >= 5)
         {
             DialogController.Instance.SetToolButtonQuestion(question);
             count = 0;
