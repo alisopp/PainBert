@@ -7,10 +7,12 @@ public class ToolController : MonoBehaviour
 {
     private static int count = 0;
     private static int overallCount = 0;
+
+    public float painMultiplier = 1;
     
     public void SetToolQuestion(Question question)
     {
-        count++;
+        // painMultiplier * 1;
         overallCount++;
 
         if(overallCount >= 5)
