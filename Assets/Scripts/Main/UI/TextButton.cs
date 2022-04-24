@@ -13,10 +13,10 @@ public class TextButton : MonoBehaviour, IPointerClickHandler
         //TODO find another way to check for selected answer
         if (pointerEventData.pointerCurrentRaycast.gameObject.name.Equals("Answer1"))
         {
-            DialogController.Instance.OnAnswerCommitted(DialogController.Instance.Dialog.answerAreas[0].Answer);
+            DialogController.Instance.OnAnswerCommitted(DialogController.Instance.Dialog.answerAreas[0].AnswerComponent);
         }else if (pointerEventData.pointerCurrentRaycast.gameObject.name.Equals("Answer2"))
         {
-            DialogController.Instance.OnAnswerCommitted(DialogController.Instance.Dialog.answerAreas[1].Answer);
+            DialogController.Instance.OnAnswerCommitted(DialogController.Instance.Dialog.answerAreas[1].AnswerComponent);
         }
 
         // invoke your event

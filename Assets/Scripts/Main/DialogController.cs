@@ -9,9 +9,6 @@ namespace Main
     {
         private static DialogController instance;
 
-        [SerializeField]
-        private Answer toolAnswer;
-
         [SerializeField] 
         public Question startQuestion;
 
@@ -38,10 +35,10 @@ namespace Main
             Dialog.SetQuestion(startQuestion);
         }
         
-        public void OnDialogAppear(Answer selectedAnswer)
+        public void OnDialogAppear()
         {
-            _currentQuestion = selectedAnswer.FollowupQuestion;
-            Dialog.SetQuestion(selectedAnswer.FollowupQuestion);
+
+            Dialog.SetQuestion(_currentQuestion);
         }
 
         // public void OnToolSelected(Tool tool)
@@ -51,18 +48,30 @@ namespace Main
         //     _currentQuestion = tool.FollowupTortureQuestion;
         // }
 
-        public void OnAnswerCommitted(Answer selectedAnswer)
+        public void OnAnswerCommitted(Answer selectedAnswerComponent)
         {
-            if (selectedAnswer.AnswerType == AnswerType.CORRECT)
+            if (selectedAnswerComponent.GetAnswerType() == AnswerType.GAME_OVER)
             {
-                _currentQuestion = selectedAnswer.FollowupQuestion;
+                // Call game over here;
+                UIManager.Instance.SetMenu(UIManager.Menu.GAME_OVER);
+                return;
+            }else if(selectedAnswerComponent.GetAnswerType() == AnswerType.WIN)
+            {
+                // Call Win;
+                UIManager.Instance.SetMenu(UIManager.Menu.WIN);
+                return;
             }
 
-            if (selectedAnswer.AnswerType == AnswerType.WRONG)
+            if (selectedAnswerComponent.GetAnswerType() == AnswerType.CORRECT)
             {
-                _currentQuestion = selectedAnswer.FollowupWrongQuestion;
+                _currentQuestion = _currentQuestion.FollowupCorrectAnswer;
             }
-            
+
+            if (selectedAnswerComponent.GetAnswerType() == AnswerType.WRONG)
+            {
+                _currentQuestion = _currentQuestion.FollowupWrongAnswer;
+            }
+            // Here we call an event
             Dialog.SetQuestion(_currentQuestion);
         }
     }

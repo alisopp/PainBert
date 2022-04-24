@@ -5,9 +5,9 @@ namespace Models
 {
     public class Tool : MonoBehaviour
     {
-        public void OnToolClick(Answer toolAnswer)
+        public void OnToolClick(AnswerComponent toolAnswerComponent)
         {
-            DialogController.Instance.OnAnswerCommitted(toolAnswer);
+            DialogController.Instance.OnAnswerCommitted(toolAnswerComponent);
         }
     }
 }

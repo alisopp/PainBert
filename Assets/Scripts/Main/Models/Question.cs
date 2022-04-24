@@ -7,6 +7,9 @@ namespace Models
     public class Question : MonoBehaviour
     {
         public String Text;
-        public List<Answer> Answers;
+        public List<AnswerComponent> Answers;
+        public Question FollowupCorrectAnswer;
+        public Question FollowupWrongAnswer;
+
     }
 }

@@ -29,7 +29,7 @@ namespace UI
             //StartCoroutine(TypeLine(question.Text.ToCharArray()));
             QuestionText.text = question.Text;
             
-            List<Answer> answers = question.Answers;
+            List<AnswerComponent> answers = question.Answers;
             foreach (var answerArea in answerAreas)
             {
                 answerArea.AnswerPanelObject.SetActive(false);
@@ -38,7 +38,7 @@ namespace UI
             for (int i = 0; i < answers.Count; i++)
             {
                 answerAreas[i].Text.text = answers[i].Text;
-                answerAreas[i].Answer = answers[i];
+                answerAreas[i].AnswerComponent = answers[i];
                 answerAreas[i].AnswerPanelObject.SetActive(true);
             }
         }
@@ -53,7 +53,7 @@ namespace UI
 
         public void AnswerClick(int answerId)
         {
-            DialogController.Instance.OnAnswerCommitted(answerAreas[answerId].Answer);
+            DialogController.Instance.OnAnswerCommitted(answerAreas[answerId].AnswerComponent);
         }
 
         private IEnumerator TypeLine(IEnumerable<char> enumChars)
@@ -63,6 +63,16 @@ namespace UI
                 QuestionText.text += c;
                 yield return new WaitForSeconds(textSpeed);
             }
+        }
+
+        public void Hide()
+        {
+            gameObject.SetActive(false);
+        }
+
+        public void Show()
+        {
+            gameObject.SetActive(true);
         }
     }
 }

@@ -671,6 +671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d487c76379340bcb8b71dced53a3d7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textSpeed: 0
   QuestionText: {fileID: 0}
   answerAreas:
   - AnswerPanelObject: {fileID: 0}
@@ -742,6 +743,7 @@ MonoBehaviour:
   AnswerType: 0
   Text: 
   FollowupQuestion: {fileID: 0}
+  FollowupWrongQuestion: {fileID: 0}
 --- !u!1 &1267433536
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,6 +1015,7 @@ MonoBehaviour:
   AnswerType: 0
   Text: Ask politely?
   FollowupQuestion: {fileID: 519519538}
+  FollowupWrongQuestion: {fileID: 0}
 --- !u!1 &1585637700
 GameObject:
   m_ObjectHideFlags: 0
@@ -1061,6 +1064,7 @@ MonoBehaviour:
   AnswerType: 0
   Text: Insult
   FollowupQuestion: {fileID: 519519538}
+  FollowupWrongQuestion: {fileID: 0}
 --- !u!1 &1799689920
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,6 +1146,7 @@ MonoBehaviour:
   AnswerType: 0
   Text: Ask politely?
   FollowupQuestion: {fileID: 519519538}
+  FollowupWrongQuestion: {fileID: 0}
 --- !u!1 &1970537154
 GameObject:
   m_ObjectHideFlags: 0
@@ -1173,6 +1178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toolAnswer: {fileID: 0}
   startQuestion: {fileID: 0}
+  _currentQuestion: {fileID: 0}
 --- !u!4 &1970537156
 Transform:
   m_ObjectHideFlags: 0

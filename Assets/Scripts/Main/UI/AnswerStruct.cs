@@ -9,12 +9,12 @@ namespace UI
     {
         public GameObject AnswerPanelObject;
         public TextMeshProUGUI Text;
-        private Answer _answer;
+        private AnswerComponent _answerComponent;
 
-        public Answer Answer
+        public AnswerComponent AnswerComponent
         {
-            get => _answer;
-            set => _answer = value;
+            get => _answerComponent;
+            set => _answerComponent = value;
         }
     }
 }

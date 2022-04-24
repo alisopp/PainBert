@@ -1,15 +1,12 @@
 ﻿using System;
-using UnityEngine;
-using UnityEngine.Events;
 
 namespace Models
 {
-    public class Answer : MonoBehaviour
+    public interface Answer
     {
-        public int EventId;
-        public AnswerType AnswerType;
-        public String Text;
-        public Question FollowupQuestion;
-        public Question FollowupWrongQuestion;
+        String GetText();
+        AnswerType GetAnswerType();
+
+        int GetEventId();
     }
 }
