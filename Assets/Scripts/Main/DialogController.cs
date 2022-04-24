@@ -54,7 +54,9 @@ namespace Main
                 // Call game over here;
                 UIManager.Instance.SetMenu(UIManager.Menu.GAME_OVER);
                 return;
-            }else if(selectedAnswerComponent.GetAnswerType() == AnswerType.WIN)
+            }
+            
+            if(selectedAnswerComponent.GetAnswerType() == AnswerType.WIN)
             {
                 // Call Win;
                 UIManager.Instance.SetMenu(UIManager.Menu.WIN);
