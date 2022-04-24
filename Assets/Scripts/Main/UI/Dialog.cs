@@ -26,9 +26,6 @@ namespace UI
 
         public void SetQuestion(Question question)
         {
-            //StartCoroutine(TypeLine(question.Text.ToCharArray()));
-            QuestionText.text = question.Text;
-            
             List<Answer> answers = question.Answers;
             foreach (var answerArea in answerAreas)
             {
@@ -41,6 +38,10 @@ namespace UI
                 answerAreas[i].Answer = answers[i];
                 answerAreas[i].AnswerPanelObject.SetActive(true);
             }
+            
+            //write text letter for letter
+            StopAllCoroutines();
+            StartCoroutine(TypeLine(question.Text.ToCharArray()));
         }
 
         // public void SetToolAnswer(Answer toolAnswer)
