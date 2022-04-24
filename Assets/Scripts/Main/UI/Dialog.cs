@@ -26,6 +26,7 @@ namespace UI
 
         public void SetQuestion(Question question)
         {
+            QuestionText.text = "";
             List<Answer> answers = question.Answers;
             foreach (var answerArea in answerAreas)
             {

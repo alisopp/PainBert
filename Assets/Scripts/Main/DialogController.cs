@@ -65,5 +65,11 @@ namespace Main
             
             Dialog.SetQuestion(_currentQuestion);
         }
+
+        public void SetToolButtonQuestion(Question question)
+        {
+            _currentQuestion = question;
+            Dialog.SetQuestion(_currentQuestion);
+        }
     }
 }
