@@ -8,7 +8,7 @@ public class ToolController : MonoBehaviour
 {
     private static int _count = 0;
     private static int _overallCount = 0;
-
+    
     public float painMultiplier = 1;
     
     public void SetToolQuestion(Question question)

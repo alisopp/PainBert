@@ -26,6 +26,11 @@ namespace UI
 
         public void SetQuestion(Question question)
         {
+            if (question.Text.Equals("What does that mean???"))
+            {
+                UIManager.Instance.SetMenu(UIManager.Menu.QUESTION_END);
+            }   
+            
             //StartCoroutine(TypeLine(question.Text.ToCharArray()));
             QuestionText.text = $"Gamebert: {question.Text}";
             
