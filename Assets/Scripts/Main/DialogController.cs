@@ -1,5 +1,4 @@
-﻿using System.Diagnostics.Tracing;
-using Models;
+﻿using Models;
 using UI;
 using UnityEngine;
 
@@ -64,12 +63,12 @@ namespace Main
 
             if (selectedAnswerComponent.GetAnswerType() == AnswerType.CORRECT)
             {
-                _currentQuestion = _currentQuestion.FollowupCorrectAnswer;
+                _currentQuestion = _currentQuestion.FollowupCorrectQuestion;
             }
 
             if (selectedAnswerComponent.GetAnswerType() == AnswerType.WRONG)
             {
-                _currentQuestion = _currentQuestion.FollowupWrongAnswer;
+                _currentQuestion = _currentQuestion.FollowupWrongQuestion;
             }
             // Here we call an event
             Dialog.SetQuestion(_currentQuestion);

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Models
 {
@@ -8,8 +9,8 @@ namespace Models
     {
         public String Text;
         public List<AnswerComponent> Answers;
-        public Question FollowupCorrectAnswer;
-        public Question FollowupWrongAnswer;
+        [FormerlySerializedAs("FollowupCorrectAnswer")] public Question FollowupCorrectQuestion;
+        [FormerlySerializedAs("FollowupWrongAnswer")] public Question FollowupWrongQuestion;
 
     }
 }
