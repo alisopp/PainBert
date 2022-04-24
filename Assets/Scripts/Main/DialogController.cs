@@ -36,16 +36,8 @@ namespace Main
         
         public void OnDialogAppear()
         {
-
             Dialog.SetQuestion(_currentQuestion);
         }
-
-        // public void OnToolSelected(Tool tool)
-        // {
-        //     // TODO Add answer to tool and call Dialog.setToolAnswer
-        //
-        //     _currentQuestion = tool.FollowupTortureQuestion;
-        // }
 
         public void OnAnswerCommitted(Answer selectedAnswerComponent)
         {

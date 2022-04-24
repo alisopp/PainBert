@@ -6,23 +6,27 @@ using UnityEngine;
 
 public class ToolController : MonoBehaviour
 {
-    private static int count = 0;
-    private static int overallCount = 0;
+    private static int _count = 0;
+    private static int _overallCount = 0;
 
     public float painMultiplier = 1;
     
     public void SetToolQuestion(Question question)
     {
-        count += (int) Math.Round(painMultiplier * 1);
-        overallCount += (int) Math.Round(painMultiplier * 1);;
+        _count += (int) Math.Round(painMultiplier * 1);
+        _overallCount += (int) Math.Round(painMultiplier * 1);;
 
-        if(overallCount >= 10)
-            UIManager.Instance.SetMenu(UIManager.Menu.GAME_OVER);
-        
-        if (count >= 5)
+        if (_overallCount >= 10)
         {
+            _count = 0;
+            _overallCount = 0;
+            UIManager.Instance.SetMenu(UIManager.Menu.GAME_OVER);
+        }
+        
+        if (_count >= 5)
+        {
+            _count = 0;
             DialogController.Instance.SetToolButtonQuestion(question);
-            count = 0;
         }
     }
 }

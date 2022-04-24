@@ -27,7 +27,7 @@ namespace UI
         public void SetQuestion(Question question)
         {
             //StartCoroutine(TypeLine(question.Text.ToCharArray()));
-            QuestionText.text = question.Text;
+            QuestionText.text = $"Gamebert: {question.Text}";
             
             List<AnswerComponent> answers = question.Answers;
             QuestionText.text = "";
