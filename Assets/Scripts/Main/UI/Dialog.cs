@@ -30,6 +30,7 @@ namespace UI
             QuestionText.text = question.Text;
             
             List<AnswerComponent> answers = question.Answers;
+            QuestionText.text = "";
             foreach (var answerArea in answerAreas)
             {
                 answerArea.AnswerPanelObject.SetActive(false);
@@ -41,6 +42,10 @@ namespace UI
                 answerAreas[i].AnswerComponent = answers[i];
                 answerAreas[i].AnswerPanelObject.SetActive(true);
             }
+            
+            //write text letter for letter
+            StopAllCoroutines();
+            StartCoroutine(TypeLine(question.Text.ToCharArray()));
         }
 
         // public void SetToolAnswer(Answer toolAnswer)

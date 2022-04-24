@@ -148,6 +148,10 @@ GameObject:
   - component: {fileID: 1990437309275007558}
   - component: {fileID: 1990437309275007559}
   - component: {fileID: 1990437309275007576}
+  - component: {fileID: 6183213256402033776}
+  - component: {fileID: -4635312377564003545}
+  - component: {fileID: 8982374969058647213}
+  - component: {fileID: -7943150017075560491}
   m_Layer: 5
   m_Name: ToolboxButton
   m_TagString: Untagged
@@ -270,6 +274,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6183213256402033776}
+        m_TargetAssemblyTypeName: ToolController, Assembly-CSharp
+        m_MethodName: SetToolQuestion
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: -4635312377564003545}
+          m_ObjectArgumentAssemblyTypeName: Models.Question, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1990437309275007576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,3 +299,65 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 0}
+--- !u!114 &6183213256402033776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990437309275007557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba4b98485f7c1c0478f55d21a83a43a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-4635312377564003545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990437309275007557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45c6d3205e8e472283f87b92729b2452, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: tool question
+  Answers:
+  - {fileID: 8982374969058647213}
+  - {fileID: -7943150017075560491}
+--- !u!114 &8982374969058647213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990437309275007557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b2e691225347a6b215333eb79959ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventId: 0
+  AnswerType: 0
+  Text: tool answer 0
+  FollowupQuestion: {fileID: 0}
+  FollowupWrongQuestion: {fileID: 0}
+--- !u!114 &-7943150017075560491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990437309275007557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b2e691225347a6b215333eb79959ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventId: 0
+  AnswerType: 1
+  Text: tool answer 1
+  FollowupQuestion: {fileID: 0}
+  FollowupWrongQuestion: {fileID: 0}
